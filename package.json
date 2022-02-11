@@ -1,22 +1,40 @@
 {
-  "name": "prueba-api-rest",
+  "name": "api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src",
-    "start": "node src/index.js"
+    "start": "nodemon -L",
+    "test": "mocha -w ./tests/**/*.spec.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Henry",
   "license": "ISC",
+  "engines": {
+    "node": ">=12.18.3",
+    "npm": ">=6.14.6"
+  },
   "dependencies": {
-    "express": "^4.16.4",
-    "morgan": "^1.9.1",
-    "node-fetch": "^2.3.0",
-    "underscore": "^1.9.1"
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "express": "^4.17.1",
+    "ioredis": "^4.19.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1",
+    "redux-mock-store": "^1.5.4",
+    "sequelize": "^6.3.5",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "supertest-session": "^4.1.0",
+    "mocha": "^8.2.1",
+    "chai": "^4.2.0",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.1"
   }
 }
