@@ -1,7 +1,7 @@
 require('dotenv').config();
 const axios = require('axios')
 const  {APIKEY } = process.env
-const {Razas,Temperamentos} = require('../db.js')
+const {Razas,Temperamentos} =  require('../db.js')
 
 const allDogs = async () => {
     let dogsDB = await Razas.findAll({
