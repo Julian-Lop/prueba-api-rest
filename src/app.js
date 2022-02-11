@@ -1,6 +1,6 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
-
+const cors = require('cors')
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
 
@@ -9,7 +9,7 @@ require('./db.js');
 const server = express();
 
 server.name = 'API';
-
+server.use(cors())
 server.use(express.urlencoded({ extended: true, limit: '50mb' }));
 server.use(express.json({ limit: '50mb' })); // Para recibir bien el body. Sin esto llegaría undefined o un objeto vacío.
 server.use(cookieParser()); // Para tener acceso a las cookies.
