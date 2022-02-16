@@ -6,7 +6,7 @@ const {
   DATABASE_URL
 } = process.env;
 
-const sequelize = new Sequelize(`postgres://nhoyqfqswozanj:4e7e1a26588fb3e3d16f25ff0417f020316d58f58d88396dcf7a6ec582a523d3@ec2-34-194-171-47.compute-1.amazonaws.com:5432/dagfmgt132l44e`, {
+const sequelize = new Sequelize(DATABASE_URL, {
   dialectOptions: {
     ssl: {
       require: true,
